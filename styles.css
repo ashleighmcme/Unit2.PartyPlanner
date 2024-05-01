@@ -18,7 +18,7 @@ h1 {
 
 /* create cards */
 
-#event_list{
+#event_list{ /* I am referencing ul.id = 'event_list' for this. */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Three columns grid for desktop.  Add media query to optimize screen. */
     gap: 100px; /* top and bottom padding */
@@ -29,9 +29,9 @@ h1 {
 .event-item {
     max-width: 400px ;
     text-align: center;
-    background-color: #8e918f; /* Background color for cards */
-    padding: 20px; /* Padding inside each card */
-    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    background-color: #8e918f; 
+    padding: 20px; 
+    border-radius: 8px; 
     border: 1px solid #5c5c5c; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }

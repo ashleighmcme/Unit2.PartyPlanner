@@ -13,8 +13,7 @@ const cohortName = "2402-ftb-mt-pt";
 // create API_URL-done
 const API_URL = `https://fsa-crud-2aa9294fe819.herokuapp.com/api/${cohortName}/events`;
 
-//URL to add to
-/* const ADD_EVENT_URL = `https://fsa-crud-2aa9294fe819.herokuapp.com/api/${cohortName}/events`; */
+
 
 // build framework for testing purposes
 const state = {
@@ -95,7 +94,7 @@ const state = {
       const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', () => {
-      deleteEvent(event.id); // Call deleteEvent function with event ID
+      deleteEvent(event.id); 
     });
     li.appendChild(deleteButton);
 
@@ -151,19 +150,19 @@ const addEventForm = document.querySelector("#addEvent");
   
   const eventName = document.getElementById('eventName').value;
   const eventDate = document.getElementById('eventDate').value;
-  /* const eventTime = document.getElementById('eventTime').value; */
+  /* const eventTime = document.getElementById('eventTime').value; commented out b/c of way API has date and time listed together */
   const eventLocation = document.getElementById('eventLocation').value;
   const eventDescription = document.getElementById('eventDescription').value;
 
   const newEvent = {
     name: eventName,
     date: new Date(eventDate).toISOString(),
-    /* time: eventTime, */
+    /* time: eventTime, commented out b/c of way API has date and time listed together*/
     location: eventLocation,
     description: eventDescription,
   };
   console.log ('try');
-  /* async function addEvent(newEvent){ */
+  /* async function addEvent(newEvent){ dont need this*/
   try {
     const response = await fetch(`${API_URL}`, {
       method: 'POST',
