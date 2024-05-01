@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- //link script and styles to html -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/javascript" src="./script.js" defer></script>
+
+    <title>Party Planned!</title>
+
+
+</head>
+<body>
+    <h1>Showing Upcoming Parties</h1>
+    <div id="events"></div>
+    <!-- //add form to add new party -->
+    <h3>Add Your Party!</h3>
+    <form id="addEvent">
+        <label for="eventName">Event Name:</label>
+    <input type="text" id="eventName" name="eventName" required>
+
+    <label for="eventDate">Date:</label>
+    <input type="datetime-local" id="eventDate" name="eventDate" required>
+
+   <!--  <label for="eventTime">Time:</label>
+    <input type="time" id="eventTime" name="eventTime" required> -->
+
+    <label for="eventLocation">Where is the party:</label>
+    <input type="location" id="eventLocation" name="eventLocation" required>
+
+    <label for="eventDescription">Tell us about your party:</label>
+    <input type="description" id="eventDescription" name="eventDescription" required>
+
+    <button type="submit">Add Event</button>  
+    </form>
+
+    
+    
+</body>
+</html>

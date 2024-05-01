@@ -1,0 +1,56 @@
+/* Labels go on their own line. */
+
+label {
+    display: block;
+    margin-bottom: 5px; 
+  }
+
+/*event name teal green */
+
+.event-item h3 {
+    color: #025043;
+}
+
+h1 {
+    color: #641D0E;
+    text-align: center;
+}
+
+/* create cards */
+
+#event_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Three columns grid for desktop.  Add media query to optimize screen. */
+    gap: 100px; /* top and bottom padding */
+    padding: 40px;
+    margin: 0 -20px; /* left and right padding */
+}
+
+.event-item {
+    max-width: 400px ;
+    text-align: center;
+    background-color: #8e918f; /* Background color for cards */
+    padding: 20px; /* Padding inside each card */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    border: 1px solid #5c5c5c; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+.event-item button{
+    border-radius: 8px;
+    border: 1px solid #5c5c5c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* screen optimization */
+
+  @media screen and (max-width: 1024px) {
+    #event_list {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #event_list {
+      grid-template-columns: repeat(1, 1fr); 
+    }
+  }
